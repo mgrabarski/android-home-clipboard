@@ -1,0 +1,13 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+}
+
+java {
+    sourceCompatibility = Java.java_version
+    targetCompatibility = Java.java_version
+}
+
+dependencies {
+    implementation Dependencies.kotlin
+}

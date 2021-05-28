@@ -1,3 +1,5 @@
+import org.gradle.api.JavaVersion
+
 object ApplicationConfig {
 
     val compileSdkVersion = 30
@@ -15,5 +17,5 @@ object Flavours {
 
 object Java {
 
-    val java_version = "1.8"
+    val java_version = JavaVersion.VERSION_1_8
 }

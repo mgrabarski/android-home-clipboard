@@ -1,2 +1,3 @@
 rootProject.name = "Home Clipboards"
 include ':app'
+include ':domain'
