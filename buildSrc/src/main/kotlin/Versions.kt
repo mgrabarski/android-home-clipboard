@@ -7,4 +7,5 @@ object Versions {
     val constraintLayout = "2.0.4"
     val junit = "5.7.1"
     val jodaTime = "2.10.10"
+    val kotest = "4.4.3"
 }

@@ -18,4 +18,5 @@ object AndroidDependencies {
 object UnitTestDependencies {
     val junit = "org.junit.jupiter:junit-jupiter-api:${Versions.junit}"
     val junitJupiterEngine = "org.junit.jupiter:junit-jupiter-engine"
+    val kotestCore = "io.kotest:kotest-assertions-core:${Versions.kotest}"
 }
