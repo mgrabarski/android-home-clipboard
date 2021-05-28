@@ -4,6 +4,8 @@
     <bytecodeTargetLevel target="1.8">
       <module name="Home_Clipboards.app" target="11" />
       <module name="Home_Clipboards.buildSrc" target="11" />
+      <module name="Home_Clipboards.components" target="11" />
+      <module name="Home_Clipboards.libraries.components" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
