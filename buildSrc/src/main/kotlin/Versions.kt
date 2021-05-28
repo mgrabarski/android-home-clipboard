@@ -6,4 +6,5 @@ object Versions {
     val material = "1.3.0"
     val constraintLayout = "2.0.4"
     val junit = "5.7.1"
+    val jodaTime = "2.10.10"
 }

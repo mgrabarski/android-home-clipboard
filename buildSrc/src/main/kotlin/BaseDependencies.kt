@@ -5,6 +5,7 @@ object BaseDependencies {
 
 object Dependencies {
     val kotlin = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
+    val jodaTime = "joda-time:joda-time:${Versions.jodaTime}"
 }
 
 object AndroidDependencies {
