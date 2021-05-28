@@ -53,6 +53,8 @@ dependencies {
     implementation AndroidDependencies.material
     implementation AndroidDependencies.constraintLayout
 
+    implementation project(Modules.libComponents)
+
     testImplementation UnitTestDependencies.junit
     testRuntimeOnly UnitTestDependencies.junitJupiterEngine
 }

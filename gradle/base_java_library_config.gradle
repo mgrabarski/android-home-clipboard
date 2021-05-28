@@ -1,0 +1,11 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+java {
+    sourceCompatibility = Java.java_version
+    targetCompatibility = Java.java_version
+}
+
+dependencies {
+    implementation Dependencies.kotlin
+}

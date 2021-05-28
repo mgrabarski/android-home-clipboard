@@ -1,14 +1,5 @@
-plugins {
-    id 'java-library'
-    id 'kotlin'
-}
-
-java {
-    sourceCompatibility = Java.java_version
-    targetCompatibility = Java.java_version
-}
+apply from: '../gradle/base_java_library_config.gradle'
 
 dependencies {
-    implementation Dependencies.kotlin
     implementation Dependencies.jodaTime
 }
