@@ -4,14 +4,15 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion ApplicationConfig.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.mg.homeclipboards"
-        minSdkVersion 23
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        applicationId Flavours.productionApplicationId
+
+        minSdkVersion ApplicationConfig.minSdkVersion
+        targetSdkVersion ApplicationConfig.targetSdkVersion
+        versionCode ApplicationConfig.versionCode
+        versionName ApplicationConfig.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -22,12 +23,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility Java.java_version
+        targetCompatibility Java.java_version
     }
+
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = Java.java_version
     }
 }
 
