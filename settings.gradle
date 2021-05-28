@@ -2,3 +2,4 @@ rootProject.name = "Home Clipboards"
 include ':app'
 include ':domain'
 include ':libraries:components'
+include ':constants'

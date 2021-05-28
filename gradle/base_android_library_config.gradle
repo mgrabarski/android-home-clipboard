@@ -43,4 +43,8 @@ android {
 
 dependencies {
     implementation Dependencies.kotlin
+
+    testImplementation UnitTestDependencies.kotestCore
+    testImplementation UnitTestDependencies.junit
+    testRuntimeOnly UnitTestDependencies.junitJupiterEngine
 }
