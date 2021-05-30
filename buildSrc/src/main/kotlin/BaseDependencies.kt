@@ -1,6 +1,7 @@
 object BaseDependencies {
     val gradle = "com.android.tools.build:gradle:${Versions.gradle}"
     val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
+    val kotlinCoroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlin}"
 }
 
 object Dependencies {

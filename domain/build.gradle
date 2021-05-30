@@ -2,6 +2,7 @@ apply from: '../gradle/base_java_library_config.gradle'
 
 dependencies {
     implementation Dependencies.jodaTime
+    implementation BaseDependencies.kotlinCoroutines
 
     implementation project(Modules.appConstants)
     implementation project(Modules.libComponents)
