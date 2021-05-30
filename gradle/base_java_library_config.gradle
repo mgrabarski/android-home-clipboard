@@ -11,6 +11,7 @@ dependencies {
 
     testImplementation UnitTestDependencies.kotestCore
     testImplementation UnitTestDependencies.kotlinCoroutines
+    testImplementation UnitTestDependencies.mockk
     testImplementation UnitTestDependencies.junit
     testRuntimeOnly UnitTestDependencies.junitJupiterEngine
 }

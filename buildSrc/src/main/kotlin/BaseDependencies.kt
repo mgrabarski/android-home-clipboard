@@ -21,4 +21,5 @@ object UnitTestDependencies {
     val junitJupiterEngine = "org.junit.jupiter:junit-jupiter-engine"
     val kotestCore = "io.kotest:kotest-assertions-core:${Versions.kotest}"
     val kotlinCoroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.kotlin}"
+    val mockk = "io.mockk:mockk:${Versions.mockk}"
 }

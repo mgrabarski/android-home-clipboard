@@ -5,3 +5,5 @@ import java.util.UUID
 typealias Name = String
 
 typealias Id = UUID
+
+typealias NumberOfInserts = Int
