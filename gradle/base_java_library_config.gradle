@@ -10,6 +10,7 @@ dependencies {
     implementation Dependencies.kotlin
 
     testImplementation UnitTestDependencies.kotestCore
+    testImplementation UnitTestDependencies.kotlinCoroutines
     testImplementation UnitTestDependencies.junit
     testRuntimeOnly UnitTestDependencies.junitJupiterEngine
 }

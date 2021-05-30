@@ -14,3 +14,5 @@ class FakeTimeProvider(
         detailsFormat = ""
     )
 }
+
+fun nowTimeProvider() = FakeTimeProvider(DateTime.now())
