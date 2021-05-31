@@ -1,16 +1,16 @@
 object BaseDependencies {
     val gradle = "com.android.tools.build:gradle:${Versions.gradle}"
     val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
-    val kotlinCoroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlin}"
-
-    val koin = "io.insert-koin:koin-android:${Versions.koin}"
-    val koinExt = "io.insert-koin:koin-android-ext:${Versions.koin}"
-    val koinWorkManager = "io.insert-koin:koin-androidx-workmanager:${Versions.koin}"
 }
 
 object Dependencies {
     val kotlin = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
+    val kotlinCoroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlin}"
     val jodaTime = "joda-time:joda-time:${Versions.jodaTime}"
+    val koinCore = "io.insert-koin:koin-core:${Versions.koin}"
+    val koinAndroid = "io.insert-koin:koin-android:${Versions.koin}"
+    val koinExt = "io.insert-koin:koin-android-ext:${Versions.koin}"
+    val koinWorkManager = "io.insert-koin:koin-androidx-workmanager:${Versions.koin}"
 }
 
 object AndroidDependencies {
@@ -26,4 +26,5 @@ object UnitTestDependencies {
     val kotestCore = "io.kotest:kotest-assertions-core:${Versions.kotest}"
     val kotlinCoroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.kotlin}"
     val mockk = "io.mockk:mockk:${Versions.mockk}"
+    val koin = "io.insert-koin:koin-test:${Versions.koin}"
 }

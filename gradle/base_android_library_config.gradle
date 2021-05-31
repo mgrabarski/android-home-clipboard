@@ -43,6 +43,9 @@ android {
 
 dependencies {
     implementation Dependencies.kotlin
+    implementation Dependencies.koinCore
+    implementation Dependencies.koinAndroid
+    implementation Dependencies.koinExt
 
     testImplementation UnitTestDependencies.kotestCore
     testImplementation UnitTestDependencies.junit

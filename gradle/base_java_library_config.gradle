@@ -8,6 +8,7 @@ java {
 
 dependencies {
     implementation Dependencies.kotlin
+    implementation Dependencies.koinCore
 
     testImplementation UnitTestDependencies.kotestCore
     testImplementation UnitTestDependencies.kotlinCoroutines
