@@ -60,6 +60,7 @@ dependencies {
     implementation project(Modules.appConstants)
     implementation project(Modules.domain)
     implementation project(Modules.libComponents)
+    implementation project(Modules.featureAddNewClipboard)
 
     testImplementation UnitTestDependencies.junit
     testRuntimeOnly UnitTestDependencies.junitJupiterEngine

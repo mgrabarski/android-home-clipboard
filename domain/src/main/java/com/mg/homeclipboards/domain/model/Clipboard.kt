@@ -14,5 +14,6 @@ data class Clipboard(
 enum class Icon {
     Fridge,
     Medics,
-    Cosmetics
+    Cosmetics,
+    Other
 }
