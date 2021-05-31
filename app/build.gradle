@@ -48,11 +48,17 @@ android {
 dependencies {
 
     implementation Dependencies.kotlin
+    implementation Dependencies.koinCore
+    implementation Dependencies.koinAndroid
+    implementation Dependencies.koinExt
+
     implementation AndroidDependencies.core
     implementation AndroidDependencies.appCompat
     implementation AndroidDependencies.material
     implementation AndroidDependencies.constraintLayout
 
+    implementation project(Modules.appConstants)
+    implementation project(Modules.domain)
     implementation project(Modules.libComponents)
 
     testImplementation UnitTestDependencies.junit

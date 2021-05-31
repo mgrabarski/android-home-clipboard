@@ -1,6 +1,7 @@
 package com.mg.homeclipboards.data.factories
 
 import com.mg.homeclipboards.data.fakes.FakeTimeProvider
+import com.mg.homeclipboards.domain.data.factories.ClipboardFactory
 import com.mg.homeclipboards.domain.model.Icon.Fridge
 import com.mg.homeclipboards.domain.model.types.Id
 import io.kotest.matchers.shouldBe

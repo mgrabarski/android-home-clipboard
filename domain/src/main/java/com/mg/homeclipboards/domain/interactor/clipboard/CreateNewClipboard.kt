@@ -1,6 +1,6 @@
 package com.mg.homeclipboards.domain.interactor.clipboard
 
-import com.mg.homeclipboards.data.factories.ClipboardFactory
+import com.mg.homeclipboards.domain.data.factories.ClipboardFactory
 import com.mg.homeclipboards.domain.model.Clipboard
 import com.mg.homeclipboards.domain.model.Icon
 import com.mg.homeclipboards.domain.model.types.Name

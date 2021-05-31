@@ -1,4 +1,4 @@
-package com.mg.homeclipboards.data.factories
+package com.mg.homeclipboards.domain.data.factories
 
 import com.mg.homeclipboards.components.time.TimeProvider
 import com.mg.homeclipboards.domain.model.Clipboard
