@@ -19,6 +19,8 @@
             <option value="$PROJECT_DIR$/features/add-clipboard" />
             <option value="$PROJECT_DIR$/libraries" />
             <option value="$PROJECT_DIR$/libraries/components" />
+            <option value="$PROJECT_DIR$/shared" />
+            <option value="$PROJECT_DIR$/shared/resources" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
