@@ -5,6 +5,7 @@
       <module name="Home_Clipboards.app" target="11" />
       <module name="Home_Clipboards.buildSrc" target="11" />
       <module name="Home_Clipboards.components" target="11" />
+      <module name="Home_Clipboards.features.add-clipboard" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

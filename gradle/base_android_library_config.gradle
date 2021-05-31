@@ -47,6 +47,11 @@ dependencies {
     implementation Dependencies.koinAndroid
     implementation Dependencies.koinExt
 
+    implementation AndroidDependencies.core
+    implementation AndroidDependencies.appCompat
+    implementation AndroidDependencies.material
+    implementation AndroidDependencies.constraintLayout
+
     testImplementation UnitTestDependencies.kotestCore
     testImplementation UnitTestDependencies.junit
     testRuntimeOnly UnitTestDependencies.junitJupiterEngine
