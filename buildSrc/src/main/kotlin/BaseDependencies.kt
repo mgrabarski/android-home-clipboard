@@ -2,6 +2,10 @@ object BaseDependencies {
     val gradle = "com.android.tools.build:gradle:${Versions.gradle}"
     val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     val kotlinCoroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlin}"
+
+    val koin = "io.insert-koin:koin-android:${Versions.koin}"
+    val koinExt = "io.insert-koin:koin-android-ext:${Versions.koin}"
+    val koinWorkManager = "io.insert-koin:koin-androidx-workmanager:${Versions.koin}"
 }
 
 object Dependencies {

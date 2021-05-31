@@ -9,4 +9,5 @@ object Versions {
     val jodaTime = "2.10.10"
     val kotest = "4.4.3"
     val mockk = "1.11.0"
+    val koin = "3.0.2"
 }
