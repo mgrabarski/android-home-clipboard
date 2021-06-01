@@ -4,4 +4,5 @@ object Modules {
     val libComponents = ":libraries:components"
     val resources = ":shared:resources"
     val featureAddNewClipboard = ":features:add-clipboard"
+    val testUtils = ":shared:test_utils"
 }

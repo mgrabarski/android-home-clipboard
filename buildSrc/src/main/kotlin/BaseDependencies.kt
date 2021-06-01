@@ -27,4 +27,7 @@ object UnitTestDependencies {
     val kotlinCoroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.kotlin}"
     val mockk = "io.mockk:mockk:${Versions.mockk}"
     val koin = "io.insert-koin:koin-test:${Versions.koin}"
+    val androidCoreTesting = "androidx.arch.core:core-testing:${Versions.androidCoreTesting}"
+    val androidCoreKtx = "androidx.test:core-ktx:${Versions.androidCoreKtx}"
+    val androidUnitTestExt = "androidx.test.ext:junit:${Versions.androidUnitTestExt}"
 }

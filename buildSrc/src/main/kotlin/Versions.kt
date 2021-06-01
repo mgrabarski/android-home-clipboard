@@ -10,4 +10,7 @@ object Versions {
     val kotest = "4.4.3"
     val mockk = "1.11.0"
     val koin = "3.0.1"
+    val androidCoreTesting = "2.1.0"
+    val androidCoreKtx = "1.1.0"
+    val androidUnitTestExt = "1.1.1"
 }

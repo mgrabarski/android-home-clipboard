@@ -3,4 +3,9 @@ apply from: '../../gradle/base_android_library_config.gradle'
 dependencies {
     implementation project(Modules.resources)
     implementation project(Modules.domain)
+
+    testImplementation UnitTestDependencies.androidCoreTesting
+    testImplementation UnitTestDependencies.androidCoreKtx
+    testImplementation UnitTestDependencies.androidUnitTestExt
+    testImplementation project(Modules.testUtils)
 }
