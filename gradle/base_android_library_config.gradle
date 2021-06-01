@@ -54,5 +54,6 @@ dependencies {
 
     testImplementation UnitTestDependencies.kotestCore
     testImplementation UnitTestDependencies.junit
+    testImplementation UnitTestDependencies.mockk
     testRuntimeOnly UnitTestDependencies.junitJupiterEngine
 }
