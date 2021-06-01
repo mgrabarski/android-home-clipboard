@@ -25,6 +25,7 @@ class AddNewClipboardFragment : Fragment() {
     ): View {
         _binding = FragmentAddNewClipboardBinding.inflate(inflater, container, false)
         binding.viewModel = viewModel
+        binding.lifecycleOwner = this
         binding.onIconClickHandler = OnIconClickHandler()
 
         return binding.root
