@@ -5,6 +5,13 @@
 
     <data>
 
+        <variable
+            name="viewModel"
+            type="com.mg.homeclipboards.add.ui.viewmodel.AddNewClipboardViewModel" />
+
+        <variable
+            name="onIconClickHandler"
+            type="com.mg.homeclipboards.add.ui.handlers.OnIconClickHandler" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -76,6 +83,7 @@
                     android:layout_height="48dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
+                    android:onClick="@{(view) -> onIconClickHandler.onIconClick(view, viewModel)}"
                     android:src="@drawable/ic_fridge"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/image2"
@@ -88,6 +96,7 @@
                     android:id="@+id/image2"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
+                    android:onClick="@{(view) -> onIconClickHandler.onIconClick(view, viewModel)}"
                     android:src="@drawable/ic_medics"
                     app:layout_constraintBottom_toBottomOf="@+id/image1"
                     app:layout_constraintEnd_toStartOf="@+id/image3"
@@ -100,6 +109,7 @@
                     android:id="@+id/image3"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
+                    android:onClick="@{(view) -> onIconClickHandler.onIconClick(view, viewModel)}"
                     android:src="@drawable/ic_cosmetics"
                     app:layout_constraintBottom_toBottomOf="@+id/image2"
                     app:layout_constraintEnd_toStartOf="@+id/image4"
@@ -112,6 +122,7 @@
                     android:id="@+id/image4"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
+                    android:onClick="@{(view) -> onIconClickHandler.onIconClick(view, viewModel)}"
                     android:src="@drawable/ic_other"
                     app:layout_constraintBottom_toBottomOf="@+id/image3"
                     app:layout_constraintEnd_toEndOf="parent"
