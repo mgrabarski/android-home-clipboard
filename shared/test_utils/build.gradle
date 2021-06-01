@@ -1,0 +1,7 @@
+apply from: '../../gradle/base_android_library_config.gradle'
+
+dependencies {
+    implementation UnitTestDependencies.kotestCore
+    implementation UnitTestDependencies.junit
+    implementation UnitTestDependencies.mockk
+}
