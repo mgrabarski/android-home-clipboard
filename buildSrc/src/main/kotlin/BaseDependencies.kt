@@ -18,6 +18,9 @@ object AndroidDependencies {
     val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     val material = "com.google.android.material:material:${Versions.material}"
     val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+    val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
+    val roomRunTime = "androidx.room:room-runtime:${Versions.room}"
+    val roomKtx = "androidx.room:room-ktx:${Versions.room}"
 }
 
 object UnitTestDependencies {
