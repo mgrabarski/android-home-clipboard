@@ -4,4 +4,7 @@ dependencies {
     implementation UnitTestDependencies.kotestCore
     implementation UnitTestDependencies.junit
     implementation UnitTestDependencies.mockk
+    implementation UnitTestDependencies.room
+    implementation UnitTestDependencies.androidCoreKtx
+    implementation UnitTestDependencies.androidCoreTesting
 }

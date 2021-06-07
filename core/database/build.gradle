@@ -2,6 +2,8 @@ apply from: '../../gradle/base_android_library_config.gradle'
 
 android {
     defaultConfig {
+        testInstrumentationRunner AndroidTestDependencies.instrumentation_runner
+
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [
@@ -26,4 +28,12 @@ dependencies {
 
     implementation project(Modules.domain)
     implementation project(Modules.appConstants)
+
+    testImplementation project(Modules.testUtils)
+    testImplementation "org.robolectric:robolectric:4.5.1"
+    testImplementation UnitTestDependencies.androidCoreTesting
+    testImplementation UnitTestDependencies.androidCoreKtx
+    testImplementation UnitTestDependencies.androidUnitTestExt
+    testImplementation UnitTestDependencies.room
+    testImplementation UnitTestDependencies.kotlinCoroutines
 }
