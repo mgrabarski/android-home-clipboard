@@ -2,5 +2,5 @@
 <resources>
     <string name="clipboard_name">Clipboard name</string>
     <string name="add">Add</string>
-    <string name="select_clipboard_image">Select clipboard image</string>
+    <string name="select_clipboard_image">Select Clipboard Image</string>
 </resources>
