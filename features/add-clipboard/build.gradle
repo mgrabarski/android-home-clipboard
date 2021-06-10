@@ -4,6 +4,8 @@ dependencies {
     implementation project(Modules.resources)
     implementation project(Modules.domain)
 
+    implementation AndroidDependencies.viewModelScope
+
     testImplementation UnitTestDependencies.androidCoreTesting
     testImplementation UnitTestDependencies.androidCoreKtx
     testImplementation UnitTestDependencies.androidUnitTestExt
