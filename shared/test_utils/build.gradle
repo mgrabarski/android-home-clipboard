@@ -1,6 +1,10 @@
 apply from: '../../gradle/base_android_library_config.gradle'
 
 dependencies {
+    implementation project(Modules.libComponents)
+
+    implementation Dependencies.kotlinCoroutines
+    implementation UnitTestDependencies.kotlinCoroutines
     implementation UnitTestDependencies.kotestCore
     implementation UnitTestDependencies.junit
     implementation UnitTestDependencies.mockk
