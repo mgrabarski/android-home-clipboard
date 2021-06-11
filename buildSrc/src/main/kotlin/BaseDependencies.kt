@@ -37,4 +37,5 @@ object UnitTestDependencies {
     val androidCoreKtx = "androidx.test:core-ktx:${Versions.androidCoreKtx}"
     val androidUnitTestExt = "androidx.test.ext:junit:${Versions.androidUnitTestExt}"
     val room = "androidx.room:room-testing:${Versions.room}"
+    val robolectric = "org.robolectric:robolectric:${Versions.robolectric}"
 }

@@ -30,7 +30,7 @@ dependencies {
     implementation project(Modules.appConstants)
 
     testImplementation project(Modules.testUtils)
-    testImplementation "org.robolectric:robolectric:4.5.1"
+    testImplementation UnitTestDependencies.robolectric
     testImplementation UnitTestDependencies.androidCoreTesting
     testImplementation UnitTestDependencies.androidCoreKtx
     testImplementation UnitTestDependencies.androidUnitTestExt

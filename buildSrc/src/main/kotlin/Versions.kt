@@ -15,4 +15,5 @@ object Versions {
     val androidUnitTestExt = "1.1.1"
     val room = "2.3.0"
     val lifecycle = "2.3.1"
+    val robolectric = "4.5.1"
 }
