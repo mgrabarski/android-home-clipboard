@@ -4,15 +4,12 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 
 interface DispatcherProvider {
-    fun default(): CoroutineDispatcher
-    fun main(): CoroutineDispatcher
-    fun io(): CoroutineDispatcher
+
+    fun main(): CoroutineDispatcher = Dispatchers.Main
+    fun default(): CoroutineDispatcher = Dispatchers.Default
+    fun io(): CoroutineDispatcher = Dispatchers.IO
+    fun unconfined(): CoroutineDispatcher = Dispatchers.Unconfined
+
 }
 
-class DefaultDispathersProvider : DispatcherProvider {
-    override fun default(): CoroutineDispatcher = Dispatchers.Default
-
-    override fun main(): CoroutineDispatcher = Dispatchers.Main
-
-    override fun io(): CoroutineDispatcher = Dispatchers.IO
-}
+class DefaultDispatcherProvider : DispatcherProvider
