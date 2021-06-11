@@ -27,6 +27,6 @@ class HomeClipboardRepository(
         id = clipboard.id.toString(),
         name = clipboard.displayName,
         icon = clipboard.icon.name,
-        createDate = clipboard.createDate.formattedDate
+        createDate = clipboard.createDate.date
     )
 }

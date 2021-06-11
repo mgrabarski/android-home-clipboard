@@ -9,6 +9,7 @@ import com.mg.homeclipboards.constants.Entities.Clipboard.TABLE_CLIPBOARD_CREATE
 import com.mg.homeclipboards.constants.Entities.Clipboard.TABLE_CLIPBOARD_ICON
 import com.mg.homeclipboards.constants.Entities.Clipboard.TABLE_CLIPBOARD_ID
 import com.mg.homeclipboards.constants.Entities.Clipboard.TABLE_CLIPBOARD_NAME
+import org.joda.time.DateTime
 
 @Entity(tableName = TABLE_CLIPBOARD)
 class ClipboardEntity(
@@ -20,5 +21,5 @@ class ClipboardEntity(
     @ColumnInfo(name = TABLE_CLIPBOARD_ICON)
     var icon: String,
     @ColumnInfo(name = TABLE_CLIPBOARD_CREATE_DATE)
-    var createDate: String
+    var createDate: DateTime
 )

@@ -4,6 +4,8 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+import com.mg.homeclipboard.database.converters.DateConverter
 import com.mg.homeclipboard.database.dao.ClipboardDao
 import com.mg.homeclipboard.database.entities.ClipboardEntity
 import com.mg.homeclipboards.constants.DATABASE_NAME
@@ -14,6 +16,7 @@ import com.mg.homeclipboards.constants.DATABASE_VERSION
         ClipboardEntity::class
     ], version = DATABASE_VERSION
 )
+@TypeConverters(DateConverter::class)
 abstract class ApplicationDatabase : RoomDatabase() {
 
     abstract fun clipboardDao(): ClipboardDao

@@ -20,6 +20,7 @@ android {
 }
 
 dependencies {
+    implementation Dependencies.jodaTime
 
     implementation AndroidDependencies.roomKtx
     implementation AndroidDependencies.roomRunTime
