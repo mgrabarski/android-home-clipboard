@@ -4,5 +4,7 @@ dependencies {
     implementation project(Modules.domain)
     implementation project(Modules.database)
 
+    implementation Dependencies.jodaTime
+
     testImplementation project(Modules.testUtils)
 }
