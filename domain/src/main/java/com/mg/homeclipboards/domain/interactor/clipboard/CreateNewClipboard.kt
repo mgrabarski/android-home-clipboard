@@ -4,7 +4,7 @@ import com.mg.homeclipboards.domain.data.factories.ClipboardFactory
 import com.mg.homeclipboards.domain.model.Clipboard
 import com.mg.homeclipboards.domain.model.Icon
 import com.mg.homeclipboards.domain.model.types.Name
-import com.mg.homeclipboards.domain.repository.local.ClipboardRepository
+import com.mg.homeclipboards.domain.repository.ClipboardRepository
 import com.mg.homeclipboards.domain.state.Failure
 import com.mg.homeclipboards.domain.state.Success
 import com.mg.homeclipboards.domain.state.UseCaseResult

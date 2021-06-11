@@ -3,4 +3,6 @@ apply from: '../../gradle/base_android_library_config.gradle'
 dependencies {
     implementation project(Modules.domain)
     implementation project(Modules.database)
+
+    testImplementation project(Modules.testUtils)
 }
