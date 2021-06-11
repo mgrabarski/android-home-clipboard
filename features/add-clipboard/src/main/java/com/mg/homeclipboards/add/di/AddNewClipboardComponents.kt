@@ -5,5 +5,5 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val addNewClipboardModule = module {
-    viewModel { AddNewClipboardViewModel() }
+    viewModel { AddNewClipboardViewModel(get()) }
 }

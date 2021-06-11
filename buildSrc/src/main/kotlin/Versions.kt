@@ -14,4 +14,5 @@ object Versions {
     val androidCoreKtx = "1.1.0"
     val androidUnitTestExt = "1.1.1"
     val room = "2.3.0"
+    val lifecycle = "2.3.1"
 }

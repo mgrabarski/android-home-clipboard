@@ -1,6 +1,7 @@
 package com.mg.homeclipboards.add.ui.handlers
 
 import android.view.View
+import android.widget.EditText
 import com.mg.homeclipboards.add.R
 import com.mg.homeclipboards.add.ui.viewmodel.AddNewClipboardViewModel
 import com.mg.homeclipboards.add.ui.viewmodel.AddNewClipboardViewModel.SelectedIcon
@@ -15,5 +16,9 @@ class OnIconClickHandler {
             R.id.image3 -> viewModel.onSelectIconChange(SelectedIcon(Cosmetics))
             R.id.image4 -> viewModel.onSelectIconChange(SelectedIcon(Other))
         }
+    }
+
+    fun onAddClick(viewModel: AddNewClipboardViewModel) {
+        viewModel.saveClipboard()
     }
 }
