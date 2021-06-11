@@ -6,7 +6,7 @@ import androidx.room.Update
 abstract class BaseDao<T> {
 
     @Insert
-    abstract suspend fun insert(obj: T)
+    abstract suspend fun insert(obj: T): Long
 
     @Insert
     abstract suspend fun insert(objc: List<T>)
