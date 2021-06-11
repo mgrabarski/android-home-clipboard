@@ -4,9 +4,11 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.mg.clipboards.test.data.getOrAwaitValue
 import com.mg.clipboards.test.extensions.InstantExecutorExtension
 import com.mg.homeclipboards.add.ui.viewmodel.AddNewClipboardViewModel.SelectedIcon
+import com.mg.homeclipboards.domain.interactor.clipboard.CreateNewClipboard
 import com.mg.homeclipboards.domain.model.Icon.Cosmetics
 import com.mg.homeclipboards.domain.model.Icon.Fridge
 import io.kotest.matchers.shouldBe
+import io.mockk.mockk
 import org.junit.Rule
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -18,11 +20,12 @@ internal class AddNewClipboardViewModelTest {
     @get:Rule
     val instantTaskExecutorRule = InstantTaskExecutorRule()
 
+    private val useCase: CreateNewClipboard = mockk()
     private lateinit var viewModel: AddNewClipboardViewModel
 
     @BeforeEach
     internal fun setUp() {
-        viewModel = AddNewClipboardViewModel()
+        viewModel = AddNewClipboardViewModel(useCase)
     }
 
     @Test
