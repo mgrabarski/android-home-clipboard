@@ -5,14 +5,18 @@ import com.mg.homeclipboards.domain.model.Clipboard
 import com.mg.homeclipboards.domain.model.types.NumberOfInserts
 import com.mg.homeclipboards.domain.repository.ClipboardRepository
 import com.mg.homeclipboards.repository.local.ClipboardLocalStorage
+import com.mg.homeclipboards.repository.remote.ClipboardRemoteStorage
 
 class HomeClipboardRepository(
-    private val clipboardLocalStorage: ClipboardLocalStorage
+    private val clipboardLocalStorage: ClipboardLocalStorage,
+    private val clipboardRemoteStorage: ClipboardRemoteStorage
 ) : ClipboardRepository {
 
     override suspend fun insertClipboard(clipboard: Clipboard): NumberOfInserts {
         val rowId = clipboardLocalStorage.insert(clipboardEntity = toEntity(clipboard))
+
         return if (rowId > 0) {
+            clipboardRemoteStorage.insert(clipboard)
             1
         } else {
             0
