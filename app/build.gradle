@@ -62,6 +62,7 @@ dependencies {
     implementation project(Modules.libComponents)
     implementation project(Modules.featureAddNewClipboard)
     implementation project(Modules.database)
+    implementation project(Modules.repository)
 
     testImplementation UnitTestDependencies.junit
     testRuntimeOnly UnitTestDependencies.junitJupiterEngine
