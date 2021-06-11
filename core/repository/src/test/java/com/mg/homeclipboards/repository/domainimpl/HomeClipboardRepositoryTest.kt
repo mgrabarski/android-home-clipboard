@@ -23,5 +23,13 @@ internal class HomeClipboardRepositoryTest {
             result shouldBe 1
         }
 
+    @Test
+    internal fun `Save clipboard in local storage should return zero when local storage return zero inserts`() =
+        testBlocking {
+            coEvery { localStorage.insert(any()) } returns 0
 
+            val result = sut.insertClipboard(anyClipboard())
+
+            result shouldBe 0
+        }
 }
