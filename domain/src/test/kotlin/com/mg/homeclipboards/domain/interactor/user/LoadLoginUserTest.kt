@@ -56,4 +56,16 @@ internal class LoadLoginUserTest {
             it.result shouldBeSameInstanceAs user
         }
     }
+
+    @Test
+    internal fun `Load user would set in on LoginUserHolder`() = testBlocking {
+        val id = Id.randomUUID()
+        val user = User(id)
+        coEvery { storage.getLoginUserId() } returns flow { id }
+        coEvery { repository.findUserById(id) } returns user
+
+        sut.load().collect {
+            LoginUserHolder.loginUser shouldBe user
+        }
+    }
 }

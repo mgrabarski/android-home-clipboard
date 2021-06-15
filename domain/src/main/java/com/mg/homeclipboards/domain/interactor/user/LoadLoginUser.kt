@@ -24,6 +24,7 @@ class LoadLoginUser(
                 if (loginUser == null) {
                     emit(Failure(ERROR_NO_USER_IN_DATABASE))
                 } else {
+                    LoginUserHolder.loginUser = loginUser
                     emit(Success(loginUser))
                 }
             }
