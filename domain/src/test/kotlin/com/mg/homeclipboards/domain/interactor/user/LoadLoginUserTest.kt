@@ -1,6 +1,7 @@
 package com.mg.homeclipboards.domain.interactor.user
 
 import com.mg.homeclipboards.domain.data.storage.LoginUserIdStorage
+import com.mg.homeclipboards.domain.model.types.Id
 import com.mg.homeclipboards.domain.repository.UserRepository
 import com.mg.homeclipboards.domain.state.Failure
 import com.mg.homeclipboards.utils.testBlocking
@@ -26,6 +27,17 @@ internal class LoadLoginUserTest {
         sut.load().collect {
             it.shouldBeInstanceOf<Failure>()
             it.message shouldBe ERROR_NO_USER_LOGIN
+        }
+    }
+
+    @Test
+    internal fun `Load emit error when repository not find user`() = testBlocking {
+        coEvery { storage.getLoginUserId() } returns flow { Id.randomUUID() }
+        coEvery { repository.findUserById(any()) } returns null
+
+        sut.load().collect {
+            it.shouldBeInstanceOf<Failure>()
+            it.message shouldBe ERROR_NO_USER_IN_DATABASE
         }
     }
 }

@@ -9,6 +9,7 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 
 const val ERROR_NO_USER_LOGIN = "No login user"
+const val ERROR_NO_USER_IN_DATABASE = "No user in database"
 
 class LoadLoginUser(
     private val userRepository: UserRepository,
@@ -19,6 +20,9 @@ class LoadLoginUser(
         loginUserIdStorage.getLoginUserId().collect { loginUserId ->
             if (loginUserId == null) {
                 emit(Failure(ERROR_NO_USER_LOGIN))
+            } else {
+                val localUser = userRepository.findUserById(loginUserId)
+                    ?: emit(Failure(ERROR_NO_USER_IN_DATABASE))
             }
         }
     }
