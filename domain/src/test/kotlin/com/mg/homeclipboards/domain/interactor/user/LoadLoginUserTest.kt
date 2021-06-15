@@ -1,12 +1,15 @@
 package com.mg.homeclipboards.domain.interactor.user
 
 import com.mg.homeclipboards.domain.data.storage.LoginUserIdStorage
+import com.mg.homeclipboards.domain.model.User
 import com.mg.homeclipboards.domain.model.types.Id
 import com.mg.homeclipboards.domain.repository.UserRepository
 import com.mg.homeclipboards.domain.state.Failure
+import com.mg.homeclipboards.domain.state.Success
 import com.mg.homeclipboards.utils.testBlocking
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.types.shouldBeInstanceOf
+import io.kotest.matchers.types.shouldBeSameInstanceAs
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.flow.collect
@@ -38,6 +41,19 @@ internal class LoadLoginUserTest {
         sut.load().collect {
             it.shouldBeInstanceOf<Failure>()
             it.message shouldBe ERROR_NO_USER_IN_DATABASE
+        }
+    }
+
+    @Test
+    internal fun `Loads emit success with user`() = testBlocking {
+        val id = Id.randomUUID()
+        val user = User(id)
+        coEvery { storage.getLoginUserId() } returns flow { id }
+        coEvery { repository.findUserById(id) } returns user
+
+        sut.load().collect {
+            it.shouldBeInstanceOf<Success<User>>()
+            it.result shouldBeSameInstanceAs user
         }
     }
 }

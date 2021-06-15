@@ -1,10 +1,9 @@
 package com.mg.homeclipboards.domain.interactor.user
 
 import com.mg.homeclipboards.domain.data.storage.LoginUserIdStorage
-import com.mg.homeclipboards.domain.model.User
 import com.mg.homeclipboards.domain.repository.UserRepository
 import com.mg.homeclipboards.domain.state.Failure
-import com.mg.homeclipboards.domain.state.UseCaseResult
+import com.mg.homeclipboards.domain.state.Success
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 
@@ -16,13 +15,17 @@ class LoadLoginUser(
     private val loginUserIdStorage: LoginUserIdStorage
 ) {
 
-    fun load() = flow<UseCaseResult<User>> {
+    fun load() = flow {
         loginUserIdStorage.getLoginUserId().collect { loginUserId ->
             if (loginUserId == null) {
                 emit(Failure(ERROR_NO_USER_LOGIN))
             } else {
-                val localUser = userRepository.findUserById(loginUserId)
-                    ?: emit(Failure(ERROR_NO_USER_IN_DATABASE))
+                val loginUser = userRepository.findUserById(loginUserId)
+                if (loginUser == null) {
+                    emit(Failure(ERROR_NO_USER_IN_DATABASE))
+                } else {
+                    emit(Success(loginUser))
+                }
             }
         }
     }
