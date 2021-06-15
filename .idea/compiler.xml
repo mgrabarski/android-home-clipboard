@@ -7,6 +7,7 @@
       <module name="Home_Clipboards.components" target="11" />
       <module name="Home_Clipboards.core.database" target="11" />
       <module name="Home_Clipboards.core.repository" target="11" />
+      <module name="Home_Clipboards.core.storage" target="11" />
       <module name="Home_Clipboards.features.add-clipboard" target="11" />
       <module name="Home_Clipboards.features.clipboard-list" target="11" />
       <module name="Home_Clipboards.shared.resources" target="11" />

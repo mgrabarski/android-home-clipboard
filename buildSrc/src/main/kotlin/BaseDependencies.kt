@@ -24,6 +24,7 @@ object AndroidDependencies {
     val viewModelScope = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     val lifecycleScope = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
     val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
+    val dataStore = "androidx.datastore:datastore-preferences:${Versions.dataStore}"
 }
 
 object UnitTestDependencies {

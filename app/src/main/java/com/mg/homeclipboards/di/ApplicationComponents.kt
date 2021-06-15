@@ -5,11 +5,13 @@ import com.mg.homeclipboards.add.di.addNewClipboardModule
 import com.mg.homeclipboards.components.di.libComponentsModule
 import com.mg.homeclipboards.domain.di.domainModule
 import com.mg.homeclipboards.repository.di.repositoryModule
+import com.mg.homeclipboards.storage.di.storageModule
 
 val appModules = listOf(
     libComponentsModule,
     domainModule,
     addNewClipboardModule,
     databaseModule,
-    repositoryModule
+    repositoryModule,
+    storageModule
 )
