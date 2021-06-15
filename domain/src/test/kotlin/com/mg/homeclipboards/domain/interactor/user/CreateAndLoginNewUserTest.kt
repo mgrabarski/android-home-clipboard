@@ -1,9 +1,11 @@
 package com.mg.homeclipboards.domain.interactor.user
 
+import com.mg.homeclipboards.domain.model.User
 import com.mg.homeclipboards.domain.repository.UserRepository
 import com.mg.homeclipboards.domain.state.Failure
+import com.mg.homeclipboards.domain.state.Success
 import com.mg.homeclipboards.utils.testBlocking
-import io.kotest.matchers.types.shouldBeSameInstanceAs
+import io.kotest.matchers.types.shouldBeInstanceOf
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk
@@ -36,10 +38,19 @@ internal class CreateAndLoginNewUserTest {
 
     @Test
     internal fun `Create user emit failure when repository return 0 inserts`() = testBlocking {
+        coEvery { repository.insertUser(any()) } returns 0
+
+        sut.create().collect { result ->
+            result.shouldBeInstanceOf<Failure>()
+        }
+    }
+
+    @Test
+    internal fun `Creates user emit success result`() = testBlocking {
         coEvery { repository.insertUser(any()) } returns 1
 
         sut.create().collect { result ->
-            result.shouldBeSameInstanceAs(Failure::class)
+            result.shouldBeInstanceOf<Success<User>>()
         }
     }
 }
