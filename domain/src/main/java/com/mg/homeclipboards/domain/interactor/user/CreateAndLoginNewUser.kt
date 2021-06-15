@@ -1,5 +1,6 @@
 package com.mg.homeclipboards.domain.interactor.user
 
+import com.mg.homeclipboards.domain.data.storage.LoginUserIdStorage
 import com.mg.homeclipboards.domain.model.User
 import com.mg.homeclipboards.domain.model.types.Id
 import com.mg.homeclipboards.domain.repository.UserRepository
@@ -10,7 +11,8 @@ import kotlinx.coroutines.flow.flow
 const val ERROR_INSERT_NEW_USER = "Problem with insert new user"
 
 class CreateAndLoginNewUser(
-    private val repository: UserRepository
+    private val repository: UserRepository,
+    private val loginUserIdStorage: LoginUserIdStorage
 ) {
 
     suspend fun create() = flow {
@@ -20,6 +22,7 @@ class CreateAndLoginNewUser(
 
         if (numberOfInserts > 0) {
             LoginUserHolder.loginUser = user
+            loginUserIdStorage.storeLoginUserId(user.id)
             emit(Success(user))
         } else {
             emit(Failure(ERROR_INSERT_NEW_USER))

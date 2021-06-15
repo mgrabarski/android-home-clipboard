@@ -1,5 +1,6 @@
 package com.mg.homeclipboards.domain.interactor.user
 
+import com.mg.homeclipboards.domain.data.storage.LoginUserIdStorage
 import com.mg.homeclipboards.domain.model.User
 import com.mg.homeclipboards.domain.repository.UserRepository
 import com.mg.homeclipboards.domain.state.Failure
@@ -11,12 +12,19 @@ import io.mockk.coVerify
 import io.mockk.mockk
 import kotlinx.coroutines.flow.collect
 import org.junit.jupiter.api.Assertions.assertNotNull
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
 internal class CreateAndLoginNewUserTest {
 
     private val repository: UserRepository = mockk()
-    private val sut = CreateAndLoginNewUser(repository)
+    private val storage: LoginUserIdStorage = mockk()
+    private val sut = CreateAndLoginNewUser(repository, storage)
+
+    @BeforeEach
+    internal fun setUp() {
+        coEvery { storage.storeLoginUserId(any()) } returns Unit
+    }
 
     @Test
     internal fun `Creates and set login user in holder`() = testBlocking {
@@ -52,5 +60,14 @@ internal class CreateAndLoginNewUserTest {
         sut.create().collect { result ->
             result.shouldBeInstanceOf<Success<User>>()
         }
+    }
+
+    @Test
+    internal fun `Creates user store id in storage`() = testBlocking {
+        coEvery { repository.insertUser(any()) } returns 1
+
+        sut.create().collect()
+
+        coVerify(exactly = 1) { storage.storeLoginUserId(any()) }
     }
 }
