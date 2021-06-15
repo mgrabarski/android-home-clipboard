@@ -15,7 +15,7 @@ class LoadLoginUser(
     private val loginUserIdStorage: LoginUserIdStorage
 ) {
 
-    fun load() = flow {
+    suspend fun load() = flow {
         loginUserIdStorage.getLoginUserId().collect { loginUserId ->
             if (loginUserId == null) {
                 emit(Failure(ERROR_NO_USER_LOGIN))
