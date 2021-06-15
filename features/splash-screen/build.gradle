@@ -11,4 +11,11 @@ dependencies {
     implementation project(Modules.resources)
     implementation project(Modules.domain)
     implementation project(Modules.libComponents)
+
+    testImplementation UnitTestDependencies.androidCoreTesting
+    testImplementation UnitTestDependencies.androidCoreKtx
+    testImplementation UnitTestDependencies.androidUnitTestExt
+    testImplementation UnitTestDependencies.kotlinCoroutines
+
+    testImplementation project(Modules.testUtils)
 }
