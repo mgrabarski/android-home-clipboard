@@ -30,7 +30,13 @@ class LoginUserIdDataStorage(
         }
     }
 
-    override suspend fun getLoginUserId(): Flow<Id> = context.dataStore.data.map { preferences ->
-        Id.fromString(preferences[loginUserId])
+    override suspend fun getLoginUserId(): Flow<Id?> = context.dataStore.data.map { preferences ->
+        val id = preferences[loginUserId]
+        when {
+            id != null -> Id.fromString(id)
+            else -> {
+                null
+            }
+        }
     }
 }

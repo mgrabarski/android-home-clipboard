@@ -5,5 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface LoginUserIdStorage {
     suspend fun storeLoginUserId(id: Id)
-    suspend fun getLoginUserId(): Flow<Id>
+    suspend fun getLoginUserId(): Flow<Id?>
 }
