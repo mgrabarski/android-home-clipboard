@@ -64,6 +64,7 @@ dependencies {
     implementation project(Modules.database)
     implementation project(Modules.repository)
     implementation project(Modules.storage)
+    implementation project(Modules.featureSplashScreen)
 
     testImplementation UnitTestDependencies.junit
     testRuntimeOnly UnitTestDependencies.junitJupiterEngine

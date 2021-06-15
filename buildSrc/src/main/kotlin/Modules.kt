@@ -8,4 +8,5 @@ object Modules {
     val database = ":core:database"
     val repository = ":core:repository"
     val storage = ":core:storage"
+    val featureSplashScreen = ":features:splash-screen"
 }

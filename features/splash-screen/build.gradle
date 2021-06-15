@@ -1,0 +1,14 @@
+apply from: '../../gradle/base_android_library_config.gradle'
+
+dependencies {
+    implementation AndroidDependencies.appCompat
+    implementation AndroidDependencies.constraintLayout
+    implementation AndroidDependencies.material
+    implementation AndroidDependencies.lifecycleScope
+
+    implementation Dependencies.kotlinCoroutines
+
+    implementation project(Modules.resources)
+    implementation project(Modules.domain)
+    implementation project(Modules.libComponents)
+}
