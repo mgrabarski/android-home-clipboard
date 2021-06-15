@@ -3,7 +3,7 @@
     package="com.mg.homeclipboards.splash">
 
     <application>
-        <activity android:name=".ui.SplashScreenActivity"></activity>
+        <activity android:name=".ui.SplashScreenFragment"></activity>
     </application>
 
 </manifest>

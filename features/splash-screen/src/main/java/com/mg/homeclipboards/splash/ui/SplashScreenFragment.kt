@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class SplashScreenActivity : AppCompatActivity() {
+class SplashScreenFragment : AppCompatActivity() {
 
     private val viewModel: SplashScreenViewModel by viewModel()
 
