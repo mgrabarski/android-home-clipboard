@@ -17,4 +17,5 @@ object Versions {
     val lifecycle = "2.3.1"
     val robolectric = "4.5.1"
     val dataStore = "1.0.0-beta01"
+    val navigation = "2.3.5"
 }

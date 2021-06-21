@@ -9,4 +9,5 @@ object Modules {
     val repository = ":core:repository"
     val storage = ":core:storage"
     val featureSplashScreen = ":features:splash-screen"
+    val featureHome = ":features:home"
 }

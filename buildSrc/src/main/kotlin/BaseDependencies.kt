@@ -1,6 +1,7 @@
 object BaseDependencies {
     val gradle = "com.android.tools.build:gradle:${Versions.gradle}"
     val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
+    val navigationSafeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
 }
 
 object Dependencies {
@@ -25,6 +26,8 @@ object AndroidDependencies {
     val lifecycleScope = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
     val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
     val dataStore = "androidx.datastore:datastore-preferences:${Versions.dataStore}"
+    val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+    val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
 }
 
 object UnitTestDependencies {

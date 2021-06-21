@@ -10,6 +10,7 @@
       <module name="Home_Clipboards.core.storage" target="11" />
       <module name="Home_Clipboards.features.add-clipboard" target="11" />
       <module name="Home_Clipboards.features.clipboard-list" target="11" />
+      <module name="Home_Clipboards.features.home" target="11" />
       <module name="Home_Clipboards.features.splash-screen" target="11" />
       <module name="Home_Clipboards.shared.resources" target="11" />
       <module name="Home_Clipboards.shared.test_utils" target="11" />
