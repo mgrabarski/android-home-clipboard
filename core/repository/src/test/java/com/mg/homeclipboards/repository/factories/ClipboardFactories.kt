@@ -26,10 +26,12 @@ fun anyClipboardEntity(
     id: Id = Id.randomUUID(),
     name: String = "name",
     icon: String = "icon",
-    createDate: String = "create"
+    createDate: DateTime = DateTime.now(),
+    userId: String = Id.randomUUID().toString()
 ) = ClipboardEntity(
     id = id.toString(),
     name = name,
     icon = icon,
-    createDate = createDate
+    createDate = createDate,
+    userId = userId
 )
