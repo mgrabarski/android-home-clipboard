@@ -7,4 +7,5 @@ import org.koin.dsl.module
 val databaseModule = module {
     single { ApplicationDatabase.buildDatabase(androidContext()) }
     factory { (get() as ApplicationDatabase).clipboardDao() }
+    factory { (get() as ApplicationDatabase).userDao() }
 }
