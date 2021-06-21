@@ -8,11 +8,13 @@ import androidx.room.TypeConverters
 import com.mg.homeclipboard.database.converters.DateConverter
 import com.mg.homeclipboard.database.dao.ClipboardDao
 import com.mg.homeclipboard.database.entities.ClipboardEntity
+import com.mg.homeclipboard.database.entities.UserEntity
 import com.mg.homeclipboards.constants.DATABASE_NAME
 import com.mg.homeclipboards.constants.DATABASE_VERSION
 
 @Database(
     entities = [
+        UserEntity::class,
         ClipboardEntity::class
     ], version = DATABASE_VERSION
 )
