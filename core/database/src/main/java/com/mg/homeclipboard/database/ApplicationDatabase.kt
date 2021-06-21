@@ -7,6 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.mg.homeclipboard.database.converters.DateConverter
 import com.mg.homeclipboard.database.dao.ClipboardDao
+import com.mg.homeclipboard.database.dao.UserDao
 import com.mg.homeclipboard.database.entities.ClipboardEntity
 import com.mg.homeclipboard.database.entities.UserEntity
 import com.mg.homeclipboards.constants.DATABASE_NAME
@@ -22,6 +23,8 @@ import com.mg.homeclipboards.constants.DATABASE_VERSION
 abstract class ApplicationDatabase : RoomDatabase() {
 
     abstract fun clipboardDao(): ClipboardDao
+
+    abstract fun userDao(): UserDao
 
     companion object {
         fun buildDatabase(context: Context) =
