@@ -7,22 +7,16 @@ import com.mg.homeclipboards.domain.state.Failure
 import com.mg.homeclipboards.domain.state.Success
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.withContext
 
 class SplashScreenViewModel(
-    private val loadLoginUser: LoadLoginUser,
-    private val dispatcherProvider: DispatcherProvider
+    private val loadLoginUser: LoadLoginUser
 ) : ViewModel() {
 
     suspend fun tryLoadUser() = flow {
-        withContext(dispatcherProvider.io()) {
-            loadLoginUser.load().collect { result ->
-                withContext(dispatcherProvider.main()) {
-                    when (result) {
-                        is Success -> emit(Home)
-                        is Failure -> emit(FirstInfo)
-                    }
-                }
+        loadLoginUser.load().collect { result ->
+            when (result) {
+                is Success -> emit(Home)
+                is Failure -> emit(FirstInfo)
             }
         }
     }

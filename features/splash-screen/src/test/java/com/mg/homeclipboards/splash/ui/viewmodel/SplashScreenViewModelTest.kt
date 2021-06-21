@@ -1,7 +1,6 @@
 package com.mg.homeclipboards.splash.ui.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.mg.clipboards.test.coroutine.CoroutineTestRule
 import com.mg.clipboards.test.coroutine.testBlocking
 import com.mg.homeclipboards.domain.interactor.user.LoadLoginUser
 import com.mg.homeclipboards.domain.model.User
@@ -23,11 +22,8 @@ internal class SplashScreenViewModelTest {
     @get:Rule
     val instantTaskExecutorRule = InstantTaskExecutorRule()
 
-    @get:Rule
-    val coroutineTestRule = CoroutineTestRule()
-
     private val useCase: LoadLoginUser = mockk()
-    private val viewModel = SplashScreenViewModel(useCase, coroutineTestRule.testDispatcherProvider)
+    private val viewModel = SplashScreenViewModel(useCase)
 
     @Test
     internal fun `Use case not login user should emit FirstInfo object`() = testBlocking {
