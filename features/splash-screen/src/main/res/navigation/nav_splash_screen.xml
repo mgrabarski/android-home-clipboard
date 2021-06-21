@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_splash_screen"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.mg.homeclipboards.splash.ui.SplashScreenFragment"
+        android:label="SplashScreenFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_firstGuideActivity"
+            app:destination="@id/firstGuideActivity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.mg.homeclipboard.home.HomeActivity"
+        android:label="HomeActivity"
+        tools:layout="@layout/activity_home" />
+    <activity
+        android:id="@+id/firstGuideActivity"
+        android:name="com.mg.homeclipboards.firstguide.view.FirstGuideActivity"
+        android:label="FirstGuideActivity"
+        tools:layout="@layout/activity_first_guide" />
+</navigation>
