@@ -1,6 +1,7 @@
 package com.mg.homeclipboards.repository.domainimpl
 
 import com.mg.homeclipboard.database.entities.ClipboardEntity
+import com.mg.homeclipboards.domain.interactor.user.LoginUserHolder
 import com.mg.homeclipboards.domain.model.Clipboard
 import com.mg.homeclipboards.domain.model.types.NumberOfInserts
 import com.mg.homeclipboards.domain.repository.ClipboardRepository
@@ -27,6 +28,7 @@ class HomeClipboardRepository(
         id = clipboard.id.toString(),
         name = clipboard.displayName,
         icon = clipboard.icon.name,
-        createDate = clipboard.createDate.date
+        createDate = clipboard.createDate.date,
+        userId = LoginUserHolder.loginUser.id.toString()
     )
 }
