@@ -6,4 +6,4 @@ typealias Name = String
 
 typealias Id = UUID
 
-typealias NumberOfInserts = Int
+typealias NumberOfInserts = Long
