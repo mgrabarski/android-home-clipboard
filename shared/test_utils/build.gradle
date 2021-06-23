@@ -2,7 +2,6 @@ apply from: '../../gradle/base_android_library_config.gradle'
 
 dependencies {
     implementation project(Modules.libComponents)
-    implementation project(Modules.domain)
 
     implementation Dependencies.kotlinCoroutines
     implementation UnitTestDependencies.kotlinCoroutines
