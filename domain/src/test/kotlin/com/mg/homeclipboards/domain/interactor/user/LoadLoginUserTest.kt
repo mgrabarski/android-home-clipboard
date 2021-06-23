@@ -25,7 +25,7 @@ internal class LoadLoginUserTest {
 
     @Test
     internal fun `Load emit error when in storage are no login user id`() = testBlocking {
-        coEvery { storage.getLoginUserId() } returns flow { null }
+        coEvery { storage.getLoginUserId() } returns flow { emit(null) }
 
         sut.load().collect {
             it.shouldBeInstanceOf<Failure>()
@@ -35,7 +35,7 @@ internal class LoadLoginUserTest {
 
     @Test
     internal fun `Load emit error when repository not find user`() = testBlocking {
-        coEvery { storage.getLoginUserId() } returns flow { Id.randomUUID() }
+        coEvery { storage.getLoginUserId() } returns flow { emit(Id.randomUUID()) }
         coEvery { repository.findUserById(any()) } returns null
 
         sut.load().collect {
@@ -48,7 +48,7 @@ internal class LoadLoginUserTest {
     internal fun `Loads emit success with user`() = testBlocking {
         val id = Id.randomUUID()
         val user = User(id)
-        coEvery { storage.getLoginUserId() } returns flow { id }
+        coEvery { storage.getLoginUserId() } returns flow { emit(id) }
         coEvery { repository.findUserById(id) } returns user
 
         sut.load().collect {
@@ -61,7 +61,7 @@ internal class LoadLoginUserTest {
     internal fun `Load user would set in on LoginUserHolder`() = testBlocking {
         val id = Id.randomUUID()
         val user = User(id)
-        coEvery { storage.getLoginUserId() } returns flow { id }
+        coEvery { storage.getLoginUserId() } returns flow { emit(id) }
         coEvery { repository.findUserById(id) } returns user
 
         sut.load().collect {
