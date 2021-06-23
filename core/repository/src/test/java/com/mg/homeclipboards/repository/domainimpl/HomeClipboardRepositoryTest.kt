@@ -1,6 +1,7 @@
 package com.mg.homeclipboards.repository.domainimpl
 
 import com.mg.clipboards.test.coroutine.testBlocking
+import com.mg.clipboards.test.data.TestLoginUserProvider
 import com.mg.homeclipboards.repository.factories.anyClipboard
 import com.mg.homeclipboards.repository.local.ClipboardLocalStorage
 import com.mg.homeclipboards.repository.remote.ClipboardRemoteStorage
@@ -15,7 +16,7 @@ internal class HomeClipboardRepositoryTest {
 
     private val localStorage: ClipboardLocalStorage = mockk()
     private val remoteStorage: ClipboardRemoteStorage = spyk()
-    private val sut = HomeClipboardRepository(localStorage, remoteStorage)
+    private val sut = HomeClipboardRepository(localStorage, remoteStorage, TestLoginUserProvider())
 
     @Test
     internal fun `Saves clipboard in local storage should return number of inserts`() =
