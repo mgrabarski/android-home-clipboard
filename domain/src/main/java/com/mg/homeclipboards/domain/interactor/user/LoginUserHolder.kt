@@ -4,6 +4,5 @@ import com.mg.homeclipboards.domain.model.User
 
 object LoginUserHolder {
 
-    lateinit var loginUser: User
-        internal set
+    internal lateinit var loginUser: User
 }
