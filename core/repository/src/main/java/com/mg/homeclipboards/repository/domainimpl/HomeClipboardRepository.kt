@@ -11,8 +11,7 @@ import com.mg.homeclipboards.repository.remote.ClipboardRemoteStorage
 
 class HomeClipboardRepository(
     private val clipboardLocalStorage: ClipboardLocalStorage,
-    private val clipboardRemoteStorage: ClipboardRemoteStorage,
-    private val loginUserProvider: LoginUserProvider
+    private val clipboardRemoteStorage: ClipboardRemoteStorage
 ) : ClipboardRepository {
 
     override suspend fun insertClipboard(clipboard: Clipboard): NumberOfInserts {
@@ -31,6 +30,6 @@ class HomeClipboardRepository(
         name = clipboard.displayName,
         icon = clipboard.icon.name,
         createDate = clipboard.createDate.date,
-        userId = loginUserProvider.get().id.toString()
+        userId = clipboard.ownerId.toString()
     )
 }

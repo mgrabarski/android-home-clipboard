@@ -19,7 +19,8 @@ fun anyClipboard(
     displayName = displayName,
     icon = icon,
     createDate = createDate,
-    products = products
+    products = products,
+    ownerId = Id.randomUUID()
 )
 
 fun anyClipboardEntity(

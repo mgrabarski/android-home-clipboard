@@ -11,6 +11,6 @@ import org.koin.dsl.module
 val repositoryModule = module {
     factory { ClipboardLocalStorage(get()) }
     factory { ClipboardRemoteStorage() }
-    factory<ClipboardRepository> { HomeClipboardRepository(get(), get(), get()) }
+    factory<ClipboardRepository> { HomeClipboardRepository(get(), get()) }
     factory<UserRepository> { LocalUserRepository(get()) }
 }

@@ -8,7 +8,8 @@ data class Clipboard(
     val displayName: Name,
     val icon: Icon,
     val createDate: CreateDate,
-    val products: List<Product>
+    val products: List<Product>,
+    val ownerId: Id
 )
 
 enum class Icon {

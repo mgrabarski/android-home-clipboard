@@ -1,6 +1,7 @@
 package com.mg.homeclipboards.domain.data.factories
 
 import com.mg.homeclipboards.components.time.TimeProvider
+import com.mg.homeclipboards.domain.interactor.user.LoginUserHolder
 import com.mg.homeclipboards.domain.model.Clipboard
 import com.mg.homeclipboards.domain.model.CreateDate
 import com.mg.homeclipboards.domain.model.Icon
@@ -20,7 +21,8 @@ class ClipboardFactory(
                 date = now.time,
                 formattedDate = now.detailsFormat
             ),
-            products = emptyList()
+            products = emptyList(),
+            ownerId = LoginUserHolder.loginUser.id
         )
     }
 }
