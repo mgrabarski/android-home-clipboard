@@ -1,11 +1,10 @@
 package com.mg.homeclipboard.home.ui.fragment
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.mg.homeclipboard.home.R
 import com.mg.homeclipboard.home.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -21,6 +20,8 @@ class HomeFragment : Fragment() {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
+        setHasOptionsMenu(true)
+
         binding.addNewClipboardFab.setOnClickListener {
             navigateToAddNewClipboard(it)
         }
@@ -31,6 +32,17 @@ class HomeFragment : Fragment() {
     private fun navigateToAddNewClipboard(view: View) {
         val action = HomeFragmentDirections.actionHomeFragmentToAddNewClipboardFragment()
         view.findNavController().navigate(action)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.home_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
+        R.id.setting -> {
+            true
+        }
+        else -> super.onOptionsItemSelected(item)
     }
 
     override fun onDestroyView() {
