@@ -1,6 +1,5 @@
 package com.mg.homeclipboards.domain.interactor.user
 
-import com.mg.homeclipboards.components.dispatchers.DispatcherProvider
 import com.mg.homeclipboards.domain.data.storage.LoginUserIdStorage
 import com.mg.homeclipboards.domain.repository.UserRepository
 import com.mg.homeclipboards.domain.state.Failure
@@ -9,7 +8,6 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import kotlinx.coroutines.withContext
 
 const val ERROR_NO_USER_LOGIN = "No login user"
 const val ERROR_NO_USER_IN_DATABASE = "No user in database"
