@@ -4,4 +4,5 @@
     <string name="clipboard_name">Clipboard name</string>
     <string name="add">Add</string>
     <string name="select_clipboard_image">Select Clipboard Image</string>
+    <string name="settings">Settings</string>
 </resources>
