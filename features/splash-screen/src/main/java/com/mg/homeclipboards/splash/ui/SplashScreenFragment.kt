@@ -41,10 +41,12 @@ class SplashScreenFragment : Fragment() {
                     is FirstInfo -> {
                         val action = actionSplashScreenFragmentToFirstGuideActivity()
                         findNavController().navigate(action)
+                        requireActivity().finish()
                     }
                     is Home -> {
                         val action = actionSplashScreenFragmentToHomeActivity()
                         findNavController().navigate(action)
+                        requireActivity().finish()
                     }
                 }
             }
