@@ -37,18 +37,16 @@ class SplashScreenFragment : Fragment() {
         lifecycleScope.launch {
             delay(1000)
             viewModel.tryLoadUser().collect {
-                when (it) {
+                val action = when (it) {
                     is FirstInfo -> {
-                        val action = actionSplashScreenFragmentToFirstGuideActivity()
-                        findNavController().navigate(action)
-                        requireActivity().finish()
+                        actionSplashScreenFragmentToFirstGuideActivity()
                     }
                     is Home -> {
-                        val action = actionSplashScreenFragmentToHomeActivity()
-                        findNavController().navigate(action)
-                        requireActivity().finish()
+                        actionSplashScreenFragmentToHomeActivity()
                     }
                 }
+                findNavController().navigate(action)
+                requireActivity().finish()
             }
         }
 
