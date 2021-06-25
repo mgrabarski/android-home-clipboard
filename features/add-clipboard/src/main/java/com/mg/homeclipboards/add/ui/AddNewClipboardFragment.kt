@@ -28,6 +28,11 @@ class AddNewClipboardFragment : Fragment() {
         binding.lifecycleOwner = this
         binding.onIconClickHandler = OnIconClickHandler()
 
+        binding.addBtn.setOnClickListener {
+            viewModel.saveClipboard()
+            requireActivity().onBackPressed()
+        }
+
         return binding.root
     }
 

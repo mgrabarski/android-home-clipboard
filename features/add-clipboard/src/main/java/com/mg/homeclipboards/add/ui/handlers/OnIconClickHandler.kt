@@ -17,8 +17,4 @@ class OnIconClickHandler {
             R.id.image4 -> viewModel.onSelectIconChange(SelectedIcon(Other))
         }
     }
-
-    fun onAddClick(viewModel: AddNewClipboardViewModel) {
-        viewModel.saveClipboard()
-    }
 }
