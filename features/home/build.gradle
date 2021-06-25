@@ -2,4 +2,5 @@ apply from: '../../gradle/base_android_library_config.gradle'
 apply plugin: 'kotlin-android'
 
 dependencies {
+    implementation project(Modules.resources)
 }

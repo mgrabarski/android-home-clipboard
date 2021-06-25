@@ -3,7 +3,10 @@
     package="com.mg.homeclipboard.home">
 
     <application>
-        <activity android:name=".HomeActivity"></activity>
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.HomeClipboards.Activity" />
     </application>
 
 </manifest>
