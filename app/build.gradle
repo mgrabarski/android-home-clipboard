@@ -57,6 +57,7 @@ dependencies {
     implementation AndroidDependencies.material
     implementation AndroidDependencies.constraintLayout
 
+    implementation project(Modules.resources)
     implementation project(Modules.appConstants)
     implementation project(Modules.domain)
     implementation project(Modules.libComponents)
