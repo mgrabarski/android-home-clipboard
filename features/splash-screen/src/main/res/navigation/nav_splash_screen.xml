@@ -20,7 +20,7 @@
 
     <activity
         android:id="@+id/homeActivity"
-        android:name="com.mg.homeclipboard.home.HomeActivity"
+        android:name="com.mg.homeclipboard.home.ui.HomeActivity"
         android:label="HomeActivity"
         tools:layout="@layout/activity_home" />
     <activity

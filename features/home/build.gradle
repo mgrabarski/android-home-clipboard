@@ -3,4 +3,5 @@ apply plugin: 'kotlin-android'
 
 dependencies {
     implementation project(Modules.resources)
+    implementation project(Modules.featureAddNewClipboard)
 }
