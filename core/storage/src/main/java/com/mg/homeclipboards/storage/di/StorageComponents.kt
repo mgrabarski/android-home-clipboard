@@ -6,5 +6,5 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
 val storageModule = module {
-    factory<LoginUserIdStorage> { LoginUserIdDataStorage(androidContext()) }
+    single<LoginUserIdStorage> { LoginUserIdDataStorage(androidContext()) }
 }
