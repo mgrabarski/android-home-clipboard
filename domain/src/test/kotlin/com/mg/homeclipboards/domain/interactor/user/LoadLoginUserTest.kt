@@ -12,16 +12,19 @@ import io.kotest.matchers.types.shouldBeInstanceOf
 import io.kotest.matchers.types.shouldBeSameInstanceAs
 import io.mockk.coEvery
 import io.mockk.mockk
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.test.TestCoroutineDispatcher
 import org.junit.jupiter.api.Test
 
+@ExperimentalCoroutinesApi
 internal class LoadLoginUserTest {
 
     private val repository: UserRepository = mockk()
     private val storage: LoginUserIdStorage = mockk()
 
-    private val sut = LoadLoginUser(repository, storage)
+    private val sut = LoadLoginUser(TestCoroutineDispatcher(), repository, storage)
 
     @Test
     internal fun `Load emit error when in storage are no login user id`() = testBlocking {
