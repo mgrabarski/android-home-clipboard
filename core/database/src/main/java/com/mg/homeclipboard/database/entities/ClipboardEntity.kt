@@ -22,7 +22,7 @@ import org.joda.time.DateTime
         onDelete = ForeignKey.CASCADE
     )]
 )
-class ClipboardEntity(
+data class ClipboardEntity(
     @PrimaryKey
     @ColumnInfo(name = TABLE_CLIPBOARD_ID)
     val id: LocalDatabaseId,
